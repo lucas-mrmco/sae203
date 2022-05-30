@@ -9,7 +9,6 @@ import Footer from './components/layout/Footer.vue';
       <RouterLink class="flex justify-start -mt-5 pb-7 -mb-24" to="/"><img src="../public/logo/logo-xl-color.png" class="w-52" alt=""></RouterLink>
       
       <nav class="flex justify-end space-x-8 font-league-gothic uppercase ">
-        <RouterLink class="text-gris hover:text-violet" to="/">Accueil </RouterLink>
         <RouterLink class="text-gris hover:text-violet" to="/programmation">Programmation </RouterLink>
         <RouterLink class="text-gris hover:text-violet" to="/artistes">Artistes </RouterLink>
         <RouterLink class="text-gris hover:text-violet" to="/festival">Le festival </RouterLink>
