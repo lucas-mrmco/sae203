@@ -7,8 +7,8 @@
     <div
       class="flex flex-col justify-start items-start h-[52.65px] absolute left-[201px] top-[14.5px]"
     >
-      <RouterLink class="flex-grow-0 flex-shrink-0  text-[15px] text-left text-[#3a3a3a]" to="/mentions">Mentions légales</RouterLink>
-      <RouterLink class="flex-grow-0 flex-shrink-0 w-[124px] h-[27px] text-[15px] text-left text-[#3a3a3a]" to="/contact">Contact </RouterLink>
+      <RouterLink class="flex-grow-0 flex-shrink-0  text-[15px] text-left text-[#3a3a3a]" to="/">Mentions légales</RouterLink>
+      <RouterLink class="flex-grow-0 flex-shrink-0 w-[124px] h-[27px] text-[15px] text-left text-[#3a3a3a]" to="/">Contact </RouterLink>
       
       
       
@@ -119,16 +119,3 @@
   </div>
 </div>
 </template>
-
-<!-- <div class="bg-white p-16">
-    <div class="flex flex-col w-max mr-10px">
-      <a
-        class="font-bangers my-1 block text-xs"
-        href="/src/views/Mentions.vue"
-        >Mentions légales</a
-      >
-      <a class="font-bangers my-1 block text-xs " href="/"
-        >Contact</a
-      >
-    </div>
-  </div> -->
