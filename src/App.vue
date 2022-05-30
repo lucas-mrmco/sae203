@@ -5,13 +5,15 @@ import Footer from './components/layout/Footer.vue';
 
 <template>
 
-  <header class="p-7 text-2xl fixed z-30 bg-white w-full">
-      <nav class="flex justify-center space-x-8 font-league-gothic uppercase ">
-        <RouterLink to="/">Accueil </RouterLink>
-        <RouterLink to="/programmation">Programmation </RouterLink>
-        <RouterLink to="/artistes">Artistes </RouterLink>
-        <RouterLink to="/festival">Le festival </RouterLink>
-        <RouterLink class="text-fushia" to="/artistes">Billeterie </RouterLink>
+  <header class="p-7 text-2xl fixed z-30 bg-white w-full shadow-xl">
+      <RouterLink class="flex justify-start -mt-5 pb-7 -mb-24" to="/"><img src="../public/logo/logo-xl-color.png" class="w-52" alt=""></RouterLink>
+      
+      <nav class="flex justify-end space-x-8 font-league-gothic uppercase ">
+        <RouterLink class="text-gris hover:text-violet" to="/">Accueil </RouterLink>
+        <RouterLink class="text-gris hover:text-violet" to="/programmation">Programmation </RouterLink>
+        <RouterLink class="text-gris hover:text-violet" to="/artistes">Artistes </RouterLink>
+        <RouterLink class="text-gris hover:text-violet" to="/festival">Le festival </RouterLink>
+        <RouterLink class="text-fushia hover:text-violet" to="/artistes">Billeterie </RouterLink>
       </nav>
   </header>
 
