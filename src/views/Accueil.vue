@@ -35,12 +35,12 @@ import Home1 from "../components/Home1.vue";
       >
         <h1 class="flex-grow-0 flex-shrink-0 text-[80px] text-left font-bangers">
           <span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-blue-600">Z</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]">énith </span
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris">énith </span
           
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#330458]">R</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]">ap </span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#8c158e]">S</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]"
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-violet">R</span
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris">ap </span
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-fushia">S</span
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris"
             >trasbourg</span
           >
         </h1>
@@ -48,7 +48,7 @@ import Home1 from "../components/Home1.vue";
       <div
         class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
       >
-        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-[#3a3a3a] font-faster-one mr-8">
+        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-gris font-faster-one mr-8">
           en extérieur
         </h2>
       </div>
@@ -56,39 +56,47 @@ import Home1 from "../components/Home1.vue";
   </div>
 </div>
 
+
+
+
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="-mb-96" alt="">
 <Home1 />
 
-<div class="grid-cols-3 flex space-x-40 -mt-96">
-    <!-- premier bouton -->
-     <div class="">
-      <a href="../views/Festival.vue" class="text-xl text-center text-black z-30"> Le festival</a>
-    
-    <div
-      class=" rounded-[10px] border-2 border-black"
-    ></div>
-     </div>
+<img src="../../public/bg/fond.png" class="relative " alt="">
 
+
+<div class="grid-cols-3 flex space-x-52 justify-center -mt-40  mb-16 relative  text-lg font-montserrat">
+    <!-- premier bouton -->
+     <div class="border-2 border-white hover:bg-white rounded-lg py-5 px-auto w-64 text-center text-white hover:text-violet">
+      <a href="../views/Festival.vue" class=""> Le festival</a>
+     </div>
     <!-- 2em bouton -->
-     <div class="">
-    <a href="/artistes" class="text-xl text-center text-black z-30"> Artistes</a>
-    <div
-      class="rounded-[10px] border-2 border-black"
-    ></div>
-  </div>
+     <div class="border-2 border-white hover:bg-white rounded-lg py-5 px-auto w-64 text-center text-white hover:text-violet">
+    <a href="/artistes" class=""> Artistes</a>
+   
+    </div>
 
     <!-- 3em bouton -->
-    <div class="">
-        <a href="/programmation" class=" text-xl text-center text-black z-30 border-2 rounded-lg p-3"> Programmation </a>
-        <div class="rounded-[10px] border-2 border-black"></div>
+    <div class="border-2 border-white hover:bg-white text-white hover:text-violet  rounded-lg py-5 px-auto w-64 text-center">
+        <a href="/programmation" class=""> Programmation </a>
+        
     </div>
 </div>
 
+<div class="mb-20 text-center">
+    <Card/>
 
-<Card/>
 
+<a href="/billeterie" class="font-league-gothic text-3xl text-fushia ">
+    
+        Billeterie
 
+    
+    
+</a>
+</div>
+
+    
 </template>
 
 <script></script>

@@ -6,12 +6,12 @@ import Footer from './components/layout/Footer.vue';
 <template>
 
   <header class="p-7 text-2xl fixed z-30 bg-white w-full">
-      <nav class="flex justify-center space-x-8 font-league-gothic ">
-        <RouterLink to="/">ACCUEIL </RouterLink>
-        <RouterLink to="/programmation">PROGRAMMATION </RouterLink>
-        <RouterLink to="/artistes">ARTISTES </RouterLink>
-        <RouterLink to="/festival">LE FESTIVAL </RouterLink>
-        <RouterLink class="text-fushia" to="/artistes">BILLETERIE </RouterLink>
+      <nav class="flex justify-center space-x-8 font-league-gothic uppercase ">
+        <RouterLink to="/">Accueil </RouterLink>
+        <RouterLink to="/programmation">Programmation </RouterLink>
+        <RouterLink to="/artistes">Artistes </RouterLink>
+        <RouterLink to="/festival">Le festival </RouterLink>
+        <RouterLink class="text-fushia" to="/artistes">Billeterie </RouterLink>
       </nav>
   </header>
 
