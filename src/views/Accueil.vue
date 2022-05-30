@@ -2,7 +2,7 @@
     <div class="flex justify-center items-center w-[1442px] ">
   <div class="flex-grow w-full">
     <div 
-      class="flex justify-start items-start  absolute left-8 gap-2.5 "
+      class="flex justify-start items-start   left-8 gap-2.5 "
     >
       <img
         src="../../public/hero/hero-3.webp"
@@ -29,8 +29,8 @@
       >
         <h1 class="flex-grow-0 flex-shrink-0 text-[80px] text-left font-bangers">
           <span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-blue-600">Z</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]">énith</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#8c158e]"> </span
+          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]">énith </span
+          
           ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#330458]">R</span
           ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#3a3a3a]">ap </span
           ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-[#8c158e]">S</span
