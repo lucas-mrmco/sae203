@@ -1,6 +1,9 @@
 <script setup>
 import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
+import ProgCard from "../components/ProgCard.vue";
+import ProgCard1 from "../components/ProgCard.vue";
+
 </script>
 
 <template>
@@ -56,33 +59,91 @@ import Home1 from "../components/Home1.vue";
   </div>
 </div>
 
-<h3 class="my-20 h-20 font-league-gothic uppercase text-3xl">Ajouter des filtres</h3>
-<!-- jour1 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">vendredi 17 juin 2022</h3>
 
+<img src="../../public/filtre.webp" alt="" class="w-screen mt-20">
+<h3 class="my-20 h-20 font-league-gothic uppercase text-3xl -mt-24 text-center">Ajouter des filtres</h3>
+
+<div class="grid-cols-9 mx-6 flex space-x-3 justify-center   mb-16 relative  text-lg font-montserrat">
+    <!-- j1 bouton  -->
+     <div class="border-2 border-fushia hover:bg-fushia rounded-2xl py-5 px-auto w-64 text-center text-fushia hover:text-white">
+      <a href="#j1" class="">Ven. 17</a>
+     </div>
+    <!-- j2 bouton -->
+     <div class="border-2 border-fushia hover:bg-fushia rounded-2xl py-5 px-auto w-64 text-center text-fushia hover:text-white">
+    <a href="#j2" class="">Sam. 18</a>
+   
+    </div>
+
+    <!-- j3 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white  rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j3" class="">Dim. 19</a>
+        
+    </div>
+
+    <!-- j4 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white  rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j4" class="">Lun. 20</a>
+        
+    </div>
+
+    <!-- j5 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white  rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j5" class="">Mar. 21</a>
+        
+    </div>
+
+    <!-- j6 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white  rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j6" class="">Mer. 22</a>
+        
+    </div>
+
+    <!-- j7 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white  rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j7" class="">Jeu. 23</a>
+        
+    </div>
+
+    <!-- j8 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white visited:bg-yellow-200 rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j8" class="">Ven. 24</a>
+        
+    </div>
+
+    <!-- j9 bouton -->
+    <div class="border-2 border-fushia hover:bg-fushia text-fushia hover:text-white visited:bg-violet rounded-2xl py-5 px-auto w-64 text-center">
+        <a href="#j9" class="">Sam. 25</a>
+        
+    </div>
+</div>
+
+
+<!-- jour1 -->
+<h3 id="j1" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">vendredi 17 juin 2022</h3>
+<ProgCard1/>
 <!-- jour2 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">samedi 18 juin 2022</h3>
+<h3 id="j2" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">samedi 18 juin 2022</h3>
 
 <!-- jour3 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">dimanche 19 juin 2022</h3>
+<h3 id="j3" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">dimanche 19 juin 2022</h3>
 
 <!-- jour4 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">lundi 20 juin 2022</h3>
+<h3 id="j4" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">lundi 20 juin 2022</h3>
 
 <!-- jour5 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">mardi 21 juin 2022</h3>
+<h3 id="j5" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">mardi 21 juin 2022</h3>
 
 <!-- jour6 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">mercredi 22 juin 2022</h3>
+<h3 id="j6" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">mercredi 22 juin 2022</h3>
 
 <!-- jour7 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">jeudi 23 juin 2022</h3>
+<h3 id="j7" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">jeudi 23 juin 2022</h3>
 
 <!-- jour8 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">vendredi 24 juin 2022</h3>
+<h3 id="j8" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">vendredi 24 juin 2022</h3>
 
 <!-- jour9 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">samedi 25 juin 2022</h3>
+<h3 id="j9" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">samedi 25 juin 2022</h3>
 
 
 
