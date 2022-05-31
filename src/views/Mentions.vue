@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-violet py-40 text-blanc px-20 font-montserrat">
+    <div class="bg-violet py-40 text-blanc px-40 font-montserrat">
         <h1 class="text-7xl font-bangers text-center ">Mentions légales</h1>
         <h4 class="text-xl font-semibold mt-20">
             Responsables éditorial & légal 
