@@ -61,7 +61,7 @@ import Pass from "../components/Pass.vue";
 <!-- partie news -->
 <div class="p-20">
   <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl mt-60">les nouveautés</h3>
-  <div class="text-sm font-montserrat space-y-5 w-2/3">
+  <div class="text-lg font-montserrat space-y-5 w-2/3">
 
     <p>
         Depuis la dernière session en 2019, les fans ne cessent de s’impatienter pour la reprise de Zénith Rap Strasbourg. Vos artistes vous manquent-ils ?

@@ -1,6 +1,7 @@
 <script setup>
 import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
+import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
 </script>
 
 <template>
@@ -81,10 +82,12 @@ import Home1 from "../components/Home1.vue";
         <a href="/programmation" class=""> Programmation </a>
         
     </div>
+    
 </div>
 
 <div class="mb-20 text-center">
     <Card/>
+    
 
 
 <a href="/billeterie" class="font-league-gothic text-3xl text-fushia ">

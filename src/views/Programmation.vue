@@ -117,6 +117,18 @@ import ProgCard1 from "../components/ProgCard.vue";
     </div>
 </div>
 
+<div class="relative mb-32 px-20">
+  <button class="inline-flex items-center h-10 px-5 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+    <span>Catégorie</span>
+    <svg class="w-4 h-4 ml-3 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+  </button>
+  <div class="absolute flex flex-col py-2 mt-1 text-gray-700 bg-white border rounded-lg">
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#monde">Scene monde</a>
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#fr">Scene fr</a>
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#battle">Scene le cercle</a>
+  </div>
+</div>
+
 
 <!-- jour1 -->
 <h3 id="j1" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">vendredi 17 juin 2022</h3>
