@@ -1,6 +1,13 @@
 <script setup>
 import Card from "../components/Card.vue"
+import Rapus from "../components/artistes/Rapus.vue"
 import Home1 from "../components/Home1.vue";
+import Rapus1 from "../components/artistes/Rapus.vue";
+import RapWfr from "../components/artistes/RapWfr.vue";
+import RapWfr1 from "../components/artistes/RapWfr.vue";
+import RapMfr1 from "../components/artistes/RapMfr.vue";
+import RapMfr from "../components/artistes/RapMfr.vue";
+
 </script>
 
 <template>
@@ -70,13 +77,13 @@ import Home1 from "../components/Home1.vue";
 <h3 class="my-20 h-20 font-league-gothic uppercase text-3xl -mt-24 text-center">Ajouter des filtres</h3>
 <!-- jour1 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rap us</h3>
-
+<Rapus1/>
 <!-- jour2 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeuses fr</h3>
-
+<RapWfr1/>
 <!-- jour3 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeurs fr</h3>
-
+<RapMfr/>
 
     
 </template>
