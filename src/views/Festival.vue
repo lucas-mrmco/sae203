@@ -1,6 +1,8 @@
 <script setup>
 import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
+import Card1 from "../components/scenes/Card.vue";
+import Pass from "../components/Pass.vue";
 </script>
 
 <template>
@@ -57,8 +59,9 @@ import Home1 from "../components/Home1.vue";
 </div>
 
 <!-- partie news -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">les nouveautés</h3>
-<div class="text-sm font-montserrat space-y-5 w-2/3 ml-20">
+<div class="p-20">
+  <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl mt-60">les nouveautés</h3>
+  <div class="text-sm font-montserrat space-y-5 w-2/3">
 
     <p>
         Depuis la dernière session en 2019, les fans ne cessent de s’impatienter pour la reprise de Zénith Rap Strasbourg. Vos artistes vous manquent-ils ?
@@ -72,13 +75,23 @@ import Home1 from "../components/Home1.vue";
     <p>
         Suite à ces deux longues années de pandémie, venez profiter et retrouver une vie vertigineuse avec les concerts les plus chaud de France.
     </p>
+  </div>
 </div>
-<!-- jour2 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeuses fr</h3>
-
-<!-- jour3 -->
-<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeurs fr</h3>
 
 
+<img src="../../public/bg/fond.png" class="absolute " alt="">
+<Card1/>
+
+<h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl px-20">avant-goût</h3>
+<div class="px-20">
+  <div class="flex  snap-x overflow-x-auto xl:flex xl:justify-start items-start w-1/2  left-[-1px] top-[-1px]">
+      <img src="../../public/festival/fest1.webp" class="self-stretch flex-grow object-cover"/>
+      <img src="../../public/festival/fest2.webp" class="self-stretch flex-grow object-cover"/>
+      <img src="../../public/festival/fest3.webp" class="self-stretch flex-grow object-cover"/>
+  </div>
+</div>
+
+<h3 id="billeterie" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl px-20">billeterie</h3>
+<Pass/>
     
 </template>

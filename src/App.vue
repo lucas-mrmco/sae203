@@ -12,7 +12,7 @@ import Footer from './components/layout/Footer.vue';
         <RouterLink class="text-gris hover:text-violet" to="/programmation">Programmation </RouterLink>
         <RouterLink class="text-gris hover:text-violet" to="/artistes">Artistes </RouterLink>
         <RouterLink class="text-gris hover:text-violet" to="/festival">Le festival </RouterLink>
-        <RouterLink class="text-fushia hover:text-violet" to="/artistes">Billeterie </RouterLink>
+        <RouterLink class="text-fushia hover:text-violet" to="/festival/#billeterie">Billeterie </RouterLink>
       </nav>
   </header>
 
