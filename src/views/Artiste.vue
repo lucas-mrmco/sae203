@@ -104,13 +104,12 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
             
         </div> -->
 
-        <div class="w-[1440px] h-[634px]">
-            <div class="relative flex w-full snap-x overflow-x-auto xl:flex xl:justify-start items-start w-1/2 absolute left-[-1px] top-[-1px]">
+            <div class="relative flex w-1/2 snap-x overflow-x-auto xl:flex xl:justify-start items-start left-[-1px] top-[-1px]">
                 <img src="../../public/fiche-gims/gims1.webp" class="self-stretch flex-grow object-cover"/>
                 <img src="../../public/fiche-gims/gims2.webp" class="self-stretch flex-grow object-cover"/>
                 <img src="../../public/fiche-gims/gims3.webp" class="self-stretch flex-grow object-cover"/>
             </div>
-        </div>
+        
 
 </div>
                 

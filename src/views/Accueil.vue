@@ -2,6 +2,7 @@
 import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
 import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
+import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
     >
       <img
         src="../../public/hero/hero-3.webp"
-        class="flex-grow   -mb-44 "
+        class="flex-grow "
       />
     </div>
     <div
@@ -61,31 +62,38 @@ import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
+<img src="../../public/bg/fond.png" class="absolute -mt-48" alt="">
 <Home1 />
 
-<img src="../../public/bg/fond.png" class="relative " alt="">
 
+<div class="flex grid-cols-3 space-x-80 mx-auto py-5 justify-center   relative">
+  <a href="/festival"><BoutonTransparent1>Le Festival</BoutonTransparent1></a>
+  <a href="/programmation"><BoutonTransparent1>Programmation</BoutonTransparent1></a>    
+  <a href="/artistes"><BoutonTransparent1>Artistes</BoutonTransparent1></a>    
+      
 
+</div>
+<!-- 
 <div class="grid-cols-3 flex space-x-52 justify-center -mt-40  mb-16 relative  text-lg font-montserrat">
-    <!-- premier bouton -->
+    premier bouton 
      <div class="border-2 border-white hover:bg-white rounded-lg py-5 px-auto w-64 text-center text-white hover:text-violet">
       <a href="../views/Festival.vue" class=""> Le festival</a>
      </div>
-    <!-- 2em bouton -->
+    2em bouton 
      <div class="border-2 border-white hover:bg-white rounded-lg py-5 px-auto w-64 text-center text-white hover:text-violet">
     <a href="/artistes" class=""> Artistes</a>
    
     </div>
 
-    <!-- 3em bouton -->
+    3em bouton 
     <div class="border-2 border-white hover:bg-white text-white hover:text-violet  rounded-lg py-5 px-auto w-64 text-center">
         <a href="/programmation" class=""> Programmation </a>
         
     </div>
     
-</div>
+</div> -->
 
-<div class="mb-20 text-center">
+<div class="mt-60 m-20 text-center ">
     <Card/>
     
 
