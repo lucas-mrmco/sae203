@@ -13,7 +13,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
                 <div class="rounded-lg bg-gray-50 shadow-lg mx-4 mb-8  w-80">
                     <div class="  ">
                         <img
-                        src="../../../public/rappeurs/gims.webp"
+                        src="/rappeurs/gims.webp"
                         class=" w-full rounded-t-lg object-cover"
                         />
                     </div>
