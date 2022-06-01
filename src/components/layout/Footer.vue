@@ -1,11 +1,11 @@
 <template>
   
   <div
-  class="flex grid-cols-2 px-4 lg:px-20 w-full h-32  md:space-x-40 lg:space-x-96 space-x-1 bg-white font-montserrat"
+  class="flex grid-cols-2   justify-center w-full h-32  md:space-x-40 lg:space-x-96 space-x-16 bg-white font-montserrat sm:pxee-10"
 >
   <div class="">
     <div
-      class="flex  flex-col justify-start font-montserrat text-xs md:text-sm items-start px-4 "
+      class="flex  flex-col justify-start font-montserrat text-xs md:text-sm items-start  "
     >
       <RouterLink class="flex-grow-0 flex-shrink-0  text-left text-[#3a3a3a]" to="/mentions">Mentions légales</RouterLink>
       <RouterLink class="flex-grow-0 flex-shrink-0  text-left text-[#3a3a3a]" to="/contact">Contact </RouterLink>
@@ -14,7 +14,7 @@
       
     </div>
     <div
-      class="flex justify-start items-end h-4 absolute space-x-5 py-10"
+      class="flex justify-start items-end h-4  space-x-5 py-10"
     >
       <svg
         width="20"
@@ -22,7 +22,7 @@
         viewBox="0 0 20 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] relative"
+        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] "
         preserveAspectRatio="xMidYMid meet"
       >
         <g clip-path="url(#clip0_1284_7430)">
@@ -56,7 +56,7 @@
         viewBox="0 0 20 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] relative"
+        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] "
         preserveAspectRatio="xMidYMid meet"
       >
         <g clip-path="url(#clip0_1284_7433)">
@@ -84,7 +84,7 @@
         viewBox="0 0 20 21"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] relative"
+        class="flex-grow-0 flex-shrink-0 w-[19px] h-[20.37px] "
         preserveAspectRatio="xMidYMid meet"
       >
         <path

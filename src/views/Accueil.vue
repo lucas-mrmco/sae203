@@ -93,12 +93,12 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
     
 </div> -->
 
-<div class="lg:mt-60 lg:m-20 m-0 text-center ">
-    <Card/>
+<div class="lg:mt-60 lg:m-20 m-0 text-center p-10">
+    <Card class=""/>
     
 
 
-<a href="/festival/#billeterie" class="font-league-gothic text-3xl text-fushia ">
+<a href="/festival/#billeterie" class="font-league-gothic text-xl  lg:text-3xl text-fushia ">
     
         Billeterie
 
