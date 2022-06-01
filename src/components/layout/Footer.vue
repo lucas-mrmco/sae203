@@ -114,7 +114,7 @@
   <div class="self-stretch flex-grow-0 flex-shrink-0 w-[163px]">
     <img
       src="../../../public/logo/logo-m-nb.png"
-      class="w-[163px] h-[100px] absolute left-[1075px] top-[14.5px] object-cover"
+      class="w-[163px] h-[100px] absolute  top-[14.5px] object-cover"
     />
   </div>
 </div>

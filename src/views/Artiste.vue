@@ -78,8 +78,8 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
                 </div>
                 <div class="flex grid-cols-2 space-x-10 mx-auto py-5 justify-center">
-                   <a href="/concert"><BoutonTransparent1/></a>
-                    <a href="/festival"><BoutonTransparent1/></a>    
+                   <a href="/concert"><BoutonTransparent1>En savoir plus sur le concert</BoutonTransparent1></a>
+                    <a href="/festival"><BoutonTransparent1>Billetterie du jour</BoutonTransparent1></a>    
                         
                  
                 </div>

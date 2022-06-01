@@ -6,14 +6,14 @@ import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
 
 <template>
 <!-- hero -->
-<div class="flex justify-center items-center w-[1442px] ">
+<div class="flex justify-center items-center w-full ">
   <div class="flex-grow w-full">
     <div 
-      class="flex justify-start items-start   left-8 gap-2.5 "
+      class="flex justify-start items-start w-full  left-8 gap-2.5 "
     >
       <img
         src="../../public/hero/hero-3.webp"
-        class="flex-grow  w-full -mb-44 "
+        class="flex-grow   -mb-44 "
       />
     </div>
     <div
@@ -21,7 +21,7 @@ import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
     >
     </div>
     <div
-      class="flex flex-col justify-start items-start w-full h-92 absolute  top-[320.5px] overflow-hidden gap-[9px] bg-gray-50/90"
+      class="flex flex-col justify-start items-start w-full py-6 absolute  top-80 overflow-hidden  bg-gray-50/90"
     >
       <div
         class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 "
@@ -90,7 +90,7 @@ import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
     
 
 
-<a href="/billeterie" class="font-league-gothic text-3xl text-fushia ">
+<a href="/festival/#billeterie" class="font-league-gothic text-3xl text-fushia ">
     
         Billeterie
 
