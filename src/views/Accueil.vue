@@ -10,7 +10,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 <div class="flex justify-center items-center w-full ">
   <div class="flex-grow w-full">
     <div 
-      class="flex justify-start items-start w-full  left-8 gap-2.5 "
+      class="flex justify-start items-start w-full   "
     >
       <img
         src="../../public/hero/hero-3.webp"
@@ -18,39 +18,39 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
       />
     </div>
     <div
-      class="flex justify-start items-start absolute overflow-hidden gap-2.5 "
+      class="flex justify-start items-start absolute overflow-hidden "
     >
     </div>
     <div
-      class="flex flex-col justify-start items-start w-full py-6 absolute  top-80 overflow-hidden  bg-gray-50/90"
+      class="flex flex-col justify-start items-start w-full py-3 lg:py-6 absolute  lg:top-80 top-60  bg-gray-50/90"
     >
       <div
-        class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 "
+        class="flex flex-col justify-center items-center self-stretch relative "
       >
         <img
           src="../../public/logo/logo-xl-color.png"
-          class="flex-grow-0 flex-shrink-0 w-80 "
+          class="flex-grow-0 flex-shrink-0 lg:w-80 w-40 "
         />
       </div>
       <div
-        class="flex justify-center  items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+        class="flex justify-center  relative w-full px-10"
       >
-        <h1 class="flex-grow-0 flex-shrink-0 text-[80px] text-left font-bangers">
-          <span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-blue-600">Z</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris">énith </span
+        <h1 class="flex-grow-0 flex-shrink-0 text-5xl lg:text-7xl text-center font-bangers">
+          <span class="flex-grow-0 flex-shrink-0 text-left text-blue-600">Z</span
+          ><span class="flex-grow-0 flex-shrink-0  text-left text-gris">énith </span
           
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-violet">R</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris">ap </span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-fushia">S</span
-          ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris"
+          ><span class="flex-grow-0 flex-shrink-0  text-left text-violet">R</span
+          ><span class="flex-grow-0 flex-shrink-0  text-left text-gris">ap </span
+          ><span class="flex-grow-0 flex-shrink-0  text-left text-fushia">S</span
+          ><span class="flex-grow-0 flex-shrink-0  text-left text-gris"
             >trasbourg</span
           >
         </h1>
       </div>
       <div
-        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative"
       >
-        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-gris font-faster-one mr-8">
+        <h2  class="flex-grow-0 flex-shrink-0 text-3xl pr-10 lg:text-5xl text-left capitalize text-gris font-faster-one ">
           en extérieur
         </h2>
       </div>
@@ -62,17 +62,17 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="absolute -mt-48" alt="">
+<img src="../../public/bg/fond.png" class="absolute  mt-20 xl:-mt-48 sm:-mt-20 h-full" alt="">
 <Home1 />
 
-
-<div class="flex grid-cols-3 space-x-80 mx-auto py-5 justify-center   relative">
+<!-- 
+<div class="flex grid-cols-3 lg:space-x-80 space-x-40 mx-auto py-5 justify-center   relative">
   <a href="/festival"><BoutonTransparent1>Le Festival</BoutonTransparent1></a>
   <a href="/programmation"><BoutonTransparent1>Programmation</BoutonTransparent1></a>    
   <a href="/artistes"><BoutonTransparent1>Artistes</BoutonTransparent1></a>    
       
 
-</div>
+</div> -->
 <!-- 
 <div class="grid-cols-3 flex space-x-52 justify-center -mt-40  mb-16 relative  text-lg font-montserrat">
     premier bouton 
@@ -93,7 +93,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
     
 </div> -->
 
-<div class="mt-60 m-20 text-center ">
+<div class="lg:mt-60 lg:m-20 m-0 text-center ">
     <Card/>
     
 
