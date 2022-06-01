@@ -33,7 +33,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
         />
       </div>
       <div
-        class="flex justify-center  relative w-full px-10"
+        class=" justify-center  relative w-full"
       >
         <h1 class="flex-grow-0 flex-shrink-0 text-5xl lg:text-7xl text-center font-bangers">
           <span class="flex-grow-0 flex-shrink-0 text-left text-blue-600">Z</span
@@ -42,7 +42,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
           ><span class="flex-grow-0 flex-shrink-0  text-left text-violet">R</span
           ><span class="flex-grow-0 flex-shrink-0  text-left text-gris">ap </span
           ><span class="flex-grow-0 flex-shrink-0  text-left text-fushia">S</span
-          ><span class="flex-grow-0 flex-shrink-0  text-left text-gris"
+          ><span class="text-gris"
             >trasbourg</span
           >
         </h1>

@@ -1,11 +1,11 @@
 <template>
   
   <div
-  class="flex grid-cols-2 px-4 lg:px-40 w-full h-32  md:space-x-40 lg:space-x-96 space-x-1 bg-white font-montserrat"
+  class="flex grid-cols-2 px-4 lg:px-20 w-full h-32  md:space-x-40 lg:space-x-96 space-x-1 bg-white font-montserrat"
 >
   <div class="">
     <div
-      class="flex  flex-col justify-start items-start px-4 "
+      class="flex  flex-col justify-start font-montserrat text-xs md:text-sm items-start px-4 "
     >
       <RouterLink class="flex-grow-0 flex-shrink-0  text-left text-[#3a3a3a]" to="/mentions">Mentions légales</RouterLink>
       <RouterLink class="flex-grow-0 flex-shrink-0  text-left text-[#3a3a3a]" to="/contact">Contact </RouterLink>
@@ -111,10 +111,10 @@
       </svg>
     </div>
   </div>
-  <div class="self-stretch flex-grow-0 flex-shrink-0 w-40">
+  <div class="lg:-mt-6 -mt-4">
     <img
       src="../../../public/logo/logo-m-nb.png"
-      class="w-40   object-cover"
+      class="w-32 sm:ml-40 lg:ml-60 xl:ml-80 lg:w-40  "
     />
   </div>
 </div>
