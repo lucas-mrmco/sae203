@@ -4,7 +4,7 @@ import BoutonGradient1 from "../buttons/BoutonGradient.vue";
 </script>
 
 <template>
-<div class="flex grid-cols-4 space-x-12 mx-40">
+<div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid space-y-10 gap-5 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center">
     <!-- 3em card -->
         <div class="rounded-[10px] bg-gray-50 shadow-lg max-w-md h-auto ">
             <div class="self-stretch flex-grow-0 flex-shrink-0  ">

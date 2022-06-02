@@ -40,7 +40,9 @@
   <h2 class="font-faster-one pt-20 text-6xl m-4">Molécules</h2>
 
   <div class="pb-80  my-9">
+    
     <Preview />
+    <RapWfr/>
       <Card1/>
       <Home1/>
       <ProgCard2 class=""/>
@@ -68,5 +70,6 @@ import ProgCard2 from "../components/ProgCard.vue";
 import Pass from "../components/Pass.vue";
 import Preview from "../components/Preview.vue";
 import Menu1 from "../components/icons/Menu.vue";
+import RapWfr from "../components/artistes/RapWfr.vue";
 
 </script>

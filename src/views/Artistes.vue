@@ -11,35 +11,35 @@ import RapMfr from "../components/artistes/RapMfr.vue";
 
 <template>
 <!-- hero -->
-<div class="flex justify-center items-center w-[1442px] ">
+<div class="flex justify-center items-center w-full ">
   <div class="flex-grow w-full">
     <div 
-      class="flex justify-start items-start   left-8 gap-2.5 "
+      class="flex justify-start items-start w-full  "
     >
       <img
         src="../../public/hero/hero-2.webp"
-        class="flex-grow  w-full -mb-44 "
+        class="flex-grow sm:pt-20 lg:pt-0  "
       />
     </div>
     <div
-      class="flex justify-start items-start absolute overflow-hidden gap-2.5 "
+      class="flex justify-start items-start absolute overflow-hidden "
     >
     </div>
     <div
-      class="flex flex-col justify-start items-start w-full h-92 absolute  top-[320.5px] overflow-hidden gap-[9px] bg-gray-50/90"
+      class="flex flex-col justify-start items-start w-full py-3 lg:py-6 absolute  lg:top-80 md:top-60 sm:top-32 top-0 bg-gray-50/90"
     >
       <div
-        class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 "
+        class="flex flex-col justify-center items-center self-stretch relative "
       >
         <img
           src="../../public/logo/logo-xl-color.png"
-          class="flex-grow-0 flex-shrink-0 w-80 "
+          class="flex-grow-0 flex-shrink-0 lg:w-80 md:w-40 w-20"
         />
       </div>
       <div
-        class="flex justify-center  items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+        class=" justify-center  relative w-full flex-wrap"
       >
-        <h1 class="flex-grow-0 flex-shrink-0 text-[80px] text-left font-bangers">
+        <h1 class="flex-grow-0 flex-shrink-0 text-3xl md:text-5xl lg:text-7xl text-center font-bangers">
           <span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-blue-600">A</span
           ><span class="flex-grow-0 flex-shrink-0 text-[80px] text-left text-gris">rt</span
           
@@ -52,9 +52,9 @@ import RapMfr from "../components/artistes/RapMfr.vue";
         </h1>
       </div>
       <div
-        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative"
       >
-        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-gris font-faster-one mr-8">
+        <h2  class="flex-grow-0 flex-shrink-0 text-lg md:text-3xl pr-10 lg:text-5xl text-left capitalize text-gris font-faster-one ">
             Liste Des Artistes
         </h2>
       </div>

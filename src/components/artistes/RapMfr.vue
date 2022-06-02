@@ -4,7 +4,7 @@ import BoutonGradient1 from "../buttons/BoutonGradient.vue";
 </script>
 
 <template>
-<div class="grid grid-cols-4 mx-20">
+<div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid space-y-10 gap-5 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center">
     <!-- 1er card -->
         <div class="rounded-[10px] bg-gray-50 shadow-lg mx-4 mb-8">
             <div class="  ">
