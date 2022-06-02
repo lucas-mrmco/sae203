@@ -14,7 +14,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
     >
       <img
         src="../../public/hero/hero-3.webp"
-        class="flex-grow "
+        class="flex-grow sm:pt-32 md:mt-0 "
       />
     </div>
     <div
@@ -22,18 +22,18 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
     >
     </div>
     <div
-      class="flex flex-col justify-start items-start w-full py-3 lg:py-6 absolute  lg:top-80 top-60  bg-gray-50/90"
+      class="flex flex-col justify-start items-start w-full py-3 lg:py-6 absolute  lg:top-80 md:top-60 sm:top-48 top-20 bg-gray-50/90"
     >
       <div
         class="flex flex-col justify-center items-center self-stretch relative "
       >
         <img
           src="../../public/logo/logo-xl-color.png"
-          class="flex-grow-0 flex-shrink-0 lg:w-80 w-40 "
+          class="flex-grow-0 flex-shrink-0 lg:w-80 md:w-40 w-20"
         />
       </div>
       <div
-        class=" justify-center  relative w-full"
+        class=" justify-center  relative w-full flex-wrap"
       >
         <h1 class="flex-grow-0 flex-shrink-0 text-5xl lg:text-7xl text-center font-bangers">
           <span class="flex-grow-0 flex-shrink-0 text-left text-blue-600">Z</span
@@ -62,7 +62,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="absolute   lg:-mt-32 -mt-16 md:-mt-20 h-full" alt="">
+<img src="../../public/bg/fond.png" class="absolute   lg:-mt-32 mt-80 md:-mt-20 h-full" alt="">
 <Home1 />
 
 <!-- 

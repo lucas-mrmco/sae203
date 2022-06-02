@@ -1,7 +1,7 @@
 <template>
   
   <div
-  class="flex grid-cols-2   justify-center w-full h-32  md:space-x-40 lg:space-x-96 space-x-16 bg-white font-montserrat sm:pxee-10"
+  class="flex flex-wrap   justify-center w-full h-32  md:space-x-40 lg:space-x-96 space-x-16 bg-white font-montserrat sm:pxee-10"
 >
   <div class="">
     <div
@@ -114,7 +114,7 @@
   <div class="lg:-mt-6 -mt-4">
     <img
       src="../../../public/logo/logo-m-nb.png"
-      class="w-32 sm:ml-40 lg:ml-60 xl:ml-80 lg:w-40  "
+      class="w-32 md:ml-40 lg:ml-60 xl:ml-80 lg:w-40  "
     />
   </div>
 </div>
