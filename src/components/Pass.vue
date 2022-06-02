@@ -1,21 +1,21 @@
 
 <template>
-<div class="grid-cols-3 flex space-x-14 m-20 justify-center">
+<div class="lg:grid-cols-3 lg:mt-40 mb-20 lg:text-2xl text-xl  lg:flex lg:space-x-14  justify-center ">
     <!-- 1er pass -->
 <div
-  class="w-80 h-auto relative rounded-[10px] bg-gris shadow-lg -rotate-12 mt-10"
+  class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
   
 >
     <div class="w-80 mt-5">
         <h3
-        class="text-2xl font-league-gothic text-center uppercase text-white"
+        class="font-league-gothic text-center uppercase text-white"
         >
         Pass 1 jour
         </h3>
     </div>
     <img
       src="../../public/d1.png"
-      class="p-3   mt-5 object-contain"
+      class="pb-6 p-2  mt-5 object-contain"
     />
     
     <p
@@ -27,19 +27,19 @@
  
 <!-- 2em pass -->
     <div
-  class="w-80 h-full relative rounded-[10px] bg-purple-900 shadow-lg"
+  class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto relative rounded-[10px] bg-purple-900 shadow-lg  mx-auto lg:mx-0"
   
 >
-    <div class="w-80 mt-5">
+    <div class="w-auto mt-5">
         <h3
-        class="text-2xl font-league-gothic text-center uppercase text-white"
+        class="font-league-gothic text-center uppercase text-white"
         >
         Pass 3 jours
         </h3>
     </div>
     <img
       src="../../public/d3.png"
-      class="-mb-5   mt-5 object-contain"
+      class="mt-5 object-contain"
     />
      <p
         class="text-base font-montserrat text-center p-2 text-white"
@@ -49,10 +49,10 @@
 </div>
 <!-- 3em pass -->
     <div
-  class="w-80 h-auto relative rounded-[10px] bg-orange-400 shadow-lg rotate-12 mt-10"
+  class="lg:w-60 lg:h-60 xl:w-80 relative xl:h-80 w-40 h-auto  rounded-[10px] bg-orange-400 shadow-lg lg:rotate-12 lg:mt-10  mx-auto lg:mx-0"
   
 >
-    <div class="w-80 mt-5">
+    <div class="w-auto mt-5">
         <h3
         class="text-2xl font-league-gothic text-center uppercase text-white"
         >
@@ -61,7 +61,7 @@
     </div>
     <img
       src="../../public/d8.png"
-      class="-mb-5    mt-5 object-contain"
+      class="-mb-10    mt-5 object-contain"
     />
      <p
         class="text-base font-montserrat text-center p-2 text-white"

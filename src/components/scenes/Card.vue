@@ -1,6 +1,6 @@
 <template>
 
-    <div class="grid-cols-3 flex space-x-14 z-20 mt-40 relative mb-80 px-10">
+    <div class="md:grid-cols-2 xl:grid-cols-3 md:px-10 px-3 md:flex space-y-10 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center">
         <!-- 1ere card -->
         <div class="flex flex-col  rounded-[10px] bg-gray-50 shadow-lg max-w-md h-auto w-full">
             <div class="self-stretch flex-grow-0 flex-shrink-0  ">

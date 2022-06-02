@@ -6,7 +6,7 @@ import Bouton1 from "../components/Bouton.vue";
 
 <template>
 
-    <div class="grid-cols-3 flex space-x-10 z-20 absolute mt-28 max-w-full mx-20">
+    <div class="md:grid-cols-2 xl:grid-cols-3 md:px-10 px-3 grid gap-y-10 space-y-10 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-cente">
         <!-- 1ere card -->
         <div class="flex flex-col  rounded-[10px] bg-gray-50 shadow-lg max-w-md h-auto ">
             <div class="self-stretch flex-grow-0 flex-shrink-0  ">
