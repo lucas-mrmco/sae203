@@ -8,6 +8,7 @@ import Artiste from '../views/Artiste.vue'
 import Concert from '../views/Concert.vue'
 import Mentions from '../views/Mentions.vue'
 import StyleGuide from '../views/StyleGuide.vue'
+import page404 from '../views/404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,7 @@ const router = createRouter({
     { path: '/concert', name: 'Concert', component: Concert },
     { path: '/mentions', name: 'Mentions', component: Mentions },
     { path: '/style-guide', name: 'StyleGuide', component: StyleGuide },
+    { path: '/:pathMatch(.*)', name: 'page404', component: page404 },
 
   ]
 })
