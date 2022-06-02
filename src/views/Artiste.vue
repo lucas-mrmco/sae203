@@ -5,9 +5,9 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 </script>
 
 <template>
-    <div class="bg-violet py-40 text-blanc px-40 font-montserrat ">
+    <div class="bg-violet py-40 text-blanc px-10 lg:px-40 font-montserrat ">
         <h1 class="text-7xl font-bangers text-center mb-20">Fiche Artiste</h1>
-        <div class="flex grid-cols-2 space-x-10">
+        <div class="lg:flex grid-cols-2 space-x-10">
             <div class="w-1/2">
                 <h3 class="font-league-gothic text-3xl uppercase">A propos</h3>
                 <div class="rounded-lg bg-gray-50 shadow-lg mx-4 mb-8  w-80">
@@ -104,7 +104,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
             
         </div> -->
 
-            <div class="relative flex w-1/2 snap-x overflow-x-auto xl:flex xl:justify-start items-start left-[-1px] top-[-1px]">
+            <div class="relative flex lg:w-1/2 w-full mt-5 snap-x overflow-x-auto xl:flex xl:justify-start items-start left-[-1px] top-[-1px]">
                 <img src="../../public/fiche-gims/gims1.webp" class="self-stretch flex-grow object-cover"/>
                 <img src="../../public/fiche-gims/gims2.webp" class="self-stretch flex-grow object-cover"/>
                 <img src="../../public/fiche-gims/gims3.webp" class="self-stretch flex-grow object-cover"/>

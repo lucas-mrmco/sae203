@@ -47,10 +47,10 @@ import Pass from "../components/Pass.vue";
         </h1>
       </div>
       <div
-        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
+        class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative "
       >
-        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-gris font-faster-one mr-8">
-            À propos de z.R.s
+        <h2  class="flex-grow-0 flex-shrink-0 text-5xl text-left capitalize text-gris font-faster-one pr-8">
+             z.R.s ?
         </h2>
       </div>
     </div>
@@ -60,7 +60,7 @@ import Pass from "../components/Pass.vue";
 <!-- partie news -->
 <div class="p-5 md:p-10 lg:p-20">
   <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl lg:mt-60">les nouveautés</h3>
-  <div class="text-lg font-montserrat space-y-5 w-9/10 lg:w-2/3">
+  <div class="text-lg font-montserrat space-y-5 w-full p-2 lg:w-2/3">
 
     <p>
         Depuis la dernière session en 2019, les fans ne cessent de s’impatienter pour la reprise de Zénith Rap Strasbourg. Vos artistes vous manquent-ils ?
@@ -78,12 +78,12 @@ import Pass from "../components/Pass.vue";
 </div>
 
 
-<img src="../../public/bg/fond.png" class="absolute " alt="">
+<img src="../../public/bg/fond.png" class="absolute w-full" alt="">
 <Card1/>
 
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl px-20">avant-goût</h3>
 <div class=" lg:px-20">
-  <div class="flex  snap-x overflow-x-auto xl:flex xl:justify-start items-start lg:w-1/2 w-full left-[-1px] top-[-1px]">
+  <div class="flex  snap-x overflow-x-auto xl:flex xl:justify-start items-start lg:w-1/2 w-full ">
       <img src="../../public/festival/fest1.webp" class="self-stretch flex-grow object-cover"/>
       <img src="../../public/festival/fest2.webp" class="self-stretch flex-grow object-cover"/>
       <img src="../../public/festival/fest3.webp" class="self-stretch flex-grow object-cover"/>

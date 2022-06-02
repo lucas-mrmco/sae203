@@ -3,7 +3,7 @@
 <div class="lg:grid-cols-3 lg:mt-40 mb-20 lg:text-2xl text-xl  lg:flex lg:space-x-14  justify-center ">
     <!-- 1er pass -->
 <div
-  class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
+  class="lg:w-60 lg:h-60 w-60 md:w-80  xl:h-80  h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
   
 >
     <div class="w-80 mt-5">
@@ -27,7 +27,7 @@
  
 <!-- 2em pass -->
     <div
-  class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto relative rounded-[10px] bg-purple-900 shadow-lg  mx-auto lg:mx-0"
+  class="lg:w-60 lg:h-60 w-60 md:w-80 xl:h-80 h-auto relative rounded-[10px] bg-purple-900 shadow-lg  mx-auto lg:mx-0"
   
 >
     <div class="w-auto mt-5">
@@ -49,7 +49,7 @@
 </div>
 <!-- 3em pass -->
     <div
-  class="lg:w-60 lg:h-60 xl:w-80 relative xl:h-80 w-40 h-auto  rounded-[10px] bg-orange-400 shadow-lg lg:rotate-12 lg:mt-10  mx-auto lg:mx-0"
+  class="lg:w-60 lg:h-60 w-60 md:w-80 relative xl:h-80  h-auto  rounded-[10px] bg-orange-400 shadow-lg lg:rotate-12 lg:mt-10  mx-auto lg:mx-0"
   
 >
     <div class="w-auto mt-5">
