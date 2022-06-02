@@ -62,23 +62,25 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="absolute invisible md:visible  lg:-mt-32 mt-80 md:-mt-20 w-full" alt="">
-<img src="../../public/bg/fond-mob.png" class="absolute  md:hidden  -mt-10 w-full " alt="">
+<img src="../../public/bg/fond.png" class="absolute invisible md:visible  lg:-mt-32 mt-80 md:-mt-20 h-full 2xl:w-full" alt="">
+<img src="../../public/bg/fond-mob.png" class="absolute  md:hidden  -mt-10  w-screen mb-80" alt="">
 <Home1 />
 
-<a href="/festival/#billeterie" class="font-league-gothic text-xl z-30  md:invisible visible lg:text-3xl text-fushia mt-20 mx-auto block text-center sm:mt-40    ">
+<!-- lien vers Billeterie visible jusqu'à md -->
+<a href="/festival/#billeterie" class="font-league-gothic text-xl z-30  md:invisible visible lg:text-3xl text-fushia bg-white relative mt-80 mx-auto block text-center w-20 rounded-md  ">
     
         Billeterie
 
     
     
 </a>
-<div class="lg:mt-60 mt-20 lg:m-20 m-0 text-center p-10">
-    <Card class=""/>
+<Card class=""/>
+<div class="lg:-mt-60 mt-20 lg:m-20 m-0 text-center p-10">
+    
     
 
-
-<a href="/festival/#billeterie" class="font-league-gothic text-xl lg:mt-0 invisible md:visible lg:text-3xl text-fushia absolute  ">
+<!-- lien vers Billeterie visible à partir de md -->
+<a href="/festival/#billeterie" class="font-league-gothic text-xl lg:mt-0 invisible md:visible lg:text-3xl text-fushia block mx-auto ">
     
         Billeterie
 

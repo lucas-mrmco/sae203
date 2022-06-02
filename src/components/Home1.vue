@@ -1,9 +1,9 @@
 <template>
 
-    <div class=" md:grid-cols-2 xl:grid-cols-3 px-10 md:flex space-y-10 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center">
+    <div class=" md:grid-cols-2 xl:grid-cols-3 md:px-10 px-3 md:flex space-y-10 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center">
         <!-- 1ere card -->
         <div class="flex flex-col  ">
-            <div class="rounded-[10px] bg-gray-50 shadow-lg max-w-md mx-auto h-auto ">
+            <div class="rounded-[10px] bg-gray-50 shadow-lg max-w-md mx-auto h-auto mt-80 md:mt-0">
                 <div class="self-stretch flex-grow-0 flex-shrink-0  ">
                 <img
                 src="../../public/home/home-2.webp"

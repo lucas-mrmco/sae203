@@ -1,7 +1,7 @@
 <template>
   
   <div
-  class="flex flex-wrap   justify-center w-full h-32  md:space-x-40 lg:space-x-96 space-x-16 bg-white font-montserrat sm:pxee-10"
+  class="flex flex-wrap sticky  justify-center w-full h-32  md:space-x-40 lg:space-x-96 space-x-16 bg-white font-montserrat sm:pxee-10"
 >
   <div class="">
     <div
