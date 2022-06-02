@@ -1,9 +1,9 @@
 <template>
 <!-- xl:grid-cols-3 md:grid-cols-2 xl:flex sm:space-x-6 xl:space-x-14 space-y-10 grid-cols-1  justify-center xl:space-y-0 spacey-20 -->
-<div class="lg:grid-cols-3 mt-40 lg:-mt-40 lg:text-2xl text-xl  lg:flex lg:space-x-14  justify-center ">
+<div class="lg:grid-cols-3 lg:mt-40 mb-20 lg:text-2xl text-xl  lg:flex lg:space-x-14  justify-center ">
     <!-- 1er pass -->
   <div
-    class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 sm:"
+    class="lg:w-60 lg:h-60 xl:w-80  xl:h-80 w-40 h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
     
   >
       <div class="w-auto mt-5">
@@ -15,7 +15,7 @@
       </div>
       <img
         src="../../public/d1.png"
-        class="   mt-5 object-contain"
+        class="pb-6 p-2  mt-5 object-contain"
       />
   </div>
     <!-- 2em pass -->

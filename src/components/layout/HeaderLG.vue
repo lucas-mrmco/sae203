@@ -4,7 +4,7 @@
 
 <template>
 
-  <header class=" p-5 text-4xl fixed bg-white w-full shadow-xl ">
+  <header class="z-50 p-5 text-4xl fixed bg-white w-full shadow-xl ">
       <RouterLink class="justify-start  " to="/"><img src="../../../public/logo/logo-xl-color.png" class="w-52" alt=""></RouterLink>
       <div class="flex justify-end w-full -mt-6">
           <nav class="flex space-x-8  pt-10  font-league-gothic uppercase ">
