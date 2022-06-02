@@ -8,10 +8,12 @@ import Footer from './components/layout/Footer.vue';
 </script>
 
 <template>
-    <header class="text-gris">
-    <HeaderXS class="xl:hidden" />
-    <HeaderLG class="hidden xl:flex" />
-  </header>
+
+      <HeaderLG class="hidden lg:flex" />
+      <HeaderXS class="lg:hidden  " />
+      
+
+  <RouterView />
   <footer>
     <Footer/>
   </footer>

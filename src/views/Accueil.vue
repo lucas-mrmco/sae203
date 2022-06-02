@@ -14,7 +14,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
     >
       <img
         src="../../public/hero/hero-3.webp"
-        class="flex-grow sm:pt-32 md:mt-0 "
+        class="flex-grow sm:pt-20 lg:pt-0 "
       />
     </div>
     <div
