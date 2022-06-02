@@ -1,5 +1,4 @@
 <script setup>
-import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
 import ProgCard from "../components/ProgCard.vue";
 import ProgCard1 from "../components/ProgCard.vue";

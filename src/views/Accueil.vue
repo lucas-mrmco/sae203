@@ -1,8 +1,8 @@
 <script setup>
-import Card from "../components/Card.vue"
 import Home1 from "../components/Home1.vue";
 import BoutonTransparent from "../components/buttons/BoutonTransparent.vue";
 import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
+import Preview from "../components/Preview.vue";
 </script>
 
 <template>
@@ -62,7 +62,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="absolute invisible md:visible  xl:-mt-32 mt-80 md:-mt-40  h-full  2xl:w-full" alt="">
+<img src="../../public/bg/fond.png" class="absolute invisible md:visible  xl:-mt-32 mt-80 md:-mt-40  min-h-full" alt="">
 <img src="../../public/bg/fond-mob.png" class="absolute  md:hidden  -mt-10  w-screen mb-80" alt="">
 <Home1 />
 
@@ -76,7 +76,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 </a>
 
 <div class="lg:-mt-60 mt-20 lg:m-20 m-0 text-center p-10">
- <Card class=""/>   
+ <Preview class=""/>   
     
 
 <!-- lien vers Billeterie visible à partir de md -->

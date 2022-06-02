@@ -1,5 +1,4 @@
 <script setup>
-import Card from "../components/Card.vue"
 import Rapus from "../components/artistes/Rapus.vue"
 import Home1 from "../components/Home1.vue";
 import Rapus1 from "../components/artistes/Rapus.vue";
