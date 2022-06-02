@@ -62,7 +62,7 @@ import BoutonTransparent1 from "../components/buttons/BoutonTransparent.vue";
 
 
 <!-- nav vers pages pricipales avec fond violet en gradient-->
-<img src="../../public/bg/fond.png" class="absolute  mt-20 xl:-mt-48 sm:-mt-20 h-full" alt="">
+<img src="../../public/bg/fond.png" class="absolute   lg:-mt-32 -mt-16 md:-mt-20 h-full" alt="">
 <Home1 />
 
 <!-- 
