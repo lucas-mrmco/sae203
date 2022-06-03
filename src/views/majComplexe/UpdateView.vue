@@ -1,12 +1,14 @@
 <template>
+    <!-- après tant d'effort je rends mon zip (ven. 17h45) avec qqs soucis avec le delete et l'update mais 
+    je me suis battu tout le long sans être venu une seul fois vers vous (pourtant je suis italien ! comme vous) -->
     <div class="container">
         <form enctype="multipart/form-data" 
-            @submit.prevent="createConcerts"
+            @submit.prevent="updateConcerts"
         >
             <div class="card bg-dark">
 
                 <div class="card-header">
-                    <h5 class="pt-40" >Création concert</h5>
+                    <h5 class="pt-40" >Modification concert</h5>
                 </div>    
                 {{concerts}}
                 <div class="card-body">   
@@ -70,7 +72,7 @@
                 </div>
 
                 <div class="">   
-                    <button type="submit" @click.prevent="createConcerts()">
+                    <button type="submit" @click.prevent="updateConcerts()">
                         Créer un concert
                     </button>
                     <button class="float-right " >
@@ -101,15 +103,18 @@ import {
 
     // Cloud Storage : import des fonctions
     import { 
-        getStorage,             // Obtenir le Cloud Storage
-        ref,                    // Pour créer une référence à un fichier à uploader
-        getDownloadURL,         // Permet de récupérer l'adress complète d'un fichier du Storage
-        uploadString,           // Permet d'uploader sur le Cloud Storage une image en Base64
+         
+    ref, 
+    getDownloadURL, 
+    uploadBytes,
+    uploadString,
+    deleteObject,
+    listAll           // Permet d'uploader sur le Cloud Storage une image en Base64
     } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
  
 export default {
-    name:'CreateView',
+    name:'UpdateView',
     data() {
         return {
             imageData:null,         // Image prévisualisée
@@ -174,13 +179,13 @@ export default {
             }
         },
 
-        async updateParticipant(){
+        async updateConcerts(){
             // Si l'image a été modifiée
             if(this.imgModifiee){
                 // On supprime l'ancienne
                 const storage = getStorage();
                 // Référence du fichier
-                let docRef = ref(storage, 'participant/'+this.photoActuelle);
+                let docRef = ref(storage, 'concerts/'+this.photoActuelle);
                 // Suppression photo actuelle
                 deleteObject(docRef);
                 // création nouvelle photo
