@@ -16,7 +16,7 @@
                 </div>
                 
                 
-                <BoutonGradient1/>
+                <BoutonGradient/>
             </div>
             
             
@@ -24,10 +24,12 @@
 </template>
 
 <script>
+import BoutonGradient from '../buttons/BoutonGradient.vue'
 export default{
     props: {
-        nom:String,
-        img:String
-    }
+        nomArtiste: String,
+        image: String
+    },
+    components: { BoutonGradient }
 }
 </script>

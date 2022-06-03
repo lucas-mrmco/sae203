@@ -8,6 +8,7 @@ import RapMfr1 from "../components/artistes/RapMfr.vue";
 import RapMfr from "../components/artistes/RapMfr.vue";
 import Card from "../components/artistes/card.vue";
 import Card1 from "../components/artistes/card.vue";
+import Card2 from "../components/artistes/card.vue";
 
 </script>
 
@@ -111,7 +112,9 @@ import Card1 from "../components/artistes/card.vue";
                 <td >
                     <input type='text' v-model='artistes.nomArtiste'  />
                 </td>
-                
+                <td>
+                  <img :src="image" alt="">
+                </td>
                 <td>
                     <button class="" @click.prevent="updateArtistes(artistes)">
                     <img src="../../public/icons/modif.svg" alt="">
@@ -125,10 +128,14 @@ import Card1 from "../components/artistes/card.vue";
             </table>
             <hr/>
 </div>
-
-<RouterLink to="/atistes" v-for="artistes in listeArtistes" :key="artistes"
-        ><Card1 :nom="artistes.nomArtiste" :image="artistes.image" 
+<!-- test composant -->
+<div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid space-y-10 gap-5 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center"><RouterLink to="/artiste" v-for="artistes in listeArtistes" :key="artistes"
+        ><Card2 :nomArtiste="artistes.nomArtiste" :image="artistes.image" 
       /></RouterLink>
+<RouterView/>      </div>
+
+
+
 <!-- jour1 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rap us</h3>
 <!-- <Rapus1/> -->
@@ -192,7 +199,7 @@ export default {
         console.log('listeArtistes', this.listeArtistes);
         this.listeArtistes.forEach(function (artistes) {
           const storage = getStorage();
-          const spaceRef = ref(storage, "/artistes" + image);
+          const spaceRef = ref(storage, "artistes/" + artistes.image);
           getDownloadURL(spaceRef)
             .then((url) => {
               artistes.image = url;
