@@ -63,7 +63,13 @@ import ProgCard3 from "../components/concerts/ProgCard.vue";
 
 <img src="../../public/filtre.webp" alt="" class="w-screen mt-20">
 <h3 class="my-20 h-20 font-league-gothic uppercase text-3xl -mt-24 text-center">Ajouter des filtres</h3>
+<div class="px-20 flex-col flex font-montserrat text-lg text-violet">
+  <a  href="/create"> Création</a>
+<a href="/delete"> Suppression</a>
+<a href="/liste"> Liste</a>
+<a href="/update"> Modification</a>
 
+</div>
 
 <div class="relative mb-32 px-20">
   <button class="inline-flex items-center h-10 px-5 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form enctype="multipart/form-data"  @submit.prevent="deleteParticipant">
+        <form   @submit.prevent="deleteParticipant">
             <div class="card bg-dark">
 
                 <div class="card-header">

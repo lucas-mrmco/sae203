@@ -1,14 +1,14 @@
 <template>
     <div class="container">
         <form enctype="multipart/form-data" 
-            @submit.prevent="createParticipant"
+            @submit.prevent="createConcerts"
         >
             <div class="card bg-dark">
 
                 <div class="card-header">
-                    <h5 style="color:white;">Création participant</h5>
+                    <h5 class="pt-40" >Création concert</h5>
                 </div>    
-
+                {{concerts}}
                 <div class="card-body">   
                     <div class="row">
                         <div class="col-6">
@@ -24,19 +24,10 @@
                                 </div>
                                 <input 
                                     class="form-control" placeholder="Nom de la personne"
-                                    v-model="participant.nom"
+                                    v-model="concerts.nom"
                                     required />                    
                             </div>
                             <br/>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" >Prénom</span>
-                                </div>
-                                <input 
-                                    v-model="participant.prenom"
-                                    class="form-control" placeholder="Prénom de la personne" key=
-                                    required />                    
-                            </div>
                             <br/>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -52,38 +43,38 @@
                             <br/>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" >Date naissance</span>
+                                    <span class="input-group-text" >Date </span>
                                 </div>
                                 <input 
                                     type="date"
                                     class="form-control"
-                                    v-model="participant.naissance" 
-                                    format="dd/mm/yyyy" 
+                                    v-model="concerts.date" 
+                                    format="yyyy/mm/dd" 
                                     required />                    
                             </div>
                             <br/>
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" >Pays</span>
+                                    <span class="input-group-text" >Scène</span>
                                 </div>
-                                <select class="custom-select" v-model="participant.nationalite">
-                                    <option selected disabled>Sélectionner un Pays</option>
-                                    <option v-for="pays in listePays" :key="pays.nom">
-                                        {{pays.nom}}
+                                <select class="custom-select" v-model="concerts.nom">
+                                    <option selected disabled>Sélectionner un nom</option>
+                                    <option v-for="scene in listeScene" :key="scene.nom">
+                                        {{scene.nom}}
                                     </option>
                                 </select>
-                            </div>
+                            </div> -->
                             <br/>
                         </div>
                     </div>               
                 </div>
 
-                <div class="card-footer">   
-                    <button type="submit" class="float-left btn btn-dark">
-                        Créer
+                <div class="">   
+                    <button type="submit" @click.prevent="createConcerts()">
+                        Créer un concert
                     </button>
-                    <button class="float-right btn btn-dark" >
-                        <router-link to="/participants" >Cancel</router-link>
+                    <button class="float-right " >
+                        <router-link to="/programmation" >Retour</router-link>
                     </button>
                 </div>
 
@@ -122,39 +113,39 @@ export default {
     data() {
         return {
             imageData:null,         // Image prévisualisée
-            listePays:[],           // Liste des pays pour la nationalité du participant
-            participant:{           // Le participant à créer
+            listeScene:[], 
+                      // Liste des pays pour la nationalité du participant
+            concerts:{           // Le participant à créer
                 nom:null,               // son nom
-                prenom:null,            // son prénom
-                photo:null,             // sa photo (nom du fichier)
-                naissance:null,         // sa date de naissance
-                nationalite:null        // sa nationalité
+                           // son prénom
+                image:null,             // sa photo (nom du fichier)
+                date:null,         // sa date de naissance
             }
         }
     },
     mounted(){ // Montage de la vue
         // Appel de la liste des pays
-        this.getPays();
+        this.getScene();
     },
     methods : {
-        async getPays(){            
+        async getScene(){            
             // Obtenir Firestore
             const firestore = getFirestore();
             // Base de données (collection)  document pays
-            const dbPays = collection(firestore, "pays");
+            const dbScene = collection(firestore, "scene");
             // Liste des participants triés
             // query permet de faire une requête sur Firebase
             // notement pour filtrer, trier ... des données
             //orderBy permet de préciser sur quel élément trier, et dans quel ordre
             // ici le nom du pays par ordre croissant (asc)            
-            const q = query(dbPays, orderBy('nom', 'asc'));
+            const q = query(dbScene, orderBy('nom', 'asc'));
             // Récupération de la liste des pays à partir de la query
             // La liste est synchronisée
             await onSnapshot(q, (snapshot) => {
-                this.listePays = snapshot.docs.map(doc => (
+                this.listeScene = snapshot.docs.map(doc => (
                     {id:doc.id, ...doc.data()}
                 ))  
-console.log("Liste des pays", this.listePays);      
+    console.log("Liste des scenes", this.listeScene);      
             })      
         },
 
@@ -162,7 +153,7 @@ console.log("Liste des pays", this.listePays);
             // Mise à jour de la photo du participant
             this.file = this.$refs.file.files[0];
             // Récupérer le nom du fichier pour la photo du participant
-            this.participant.photo = this.file.name;
+            this.concerts.image = this.file.name;
             // Reference to the DOM input element
             // Reference du fichier à prévisualiser
             var input = event.target;
@@ -183,34 +174,40 @@ console.log("Liste des pays", this.listePays);
             }
         },
 
-        async createParticipant(){
+        async createConcerts(){
             // Obtenir storage Firebase
             const storage = getStorage();
             // Référence de l'image à uploader
-            const refStorage = ref(storage, 'participant/'+this.participant.photo);
+            const refStorage = ref(storage, 'concerts/'+this.concerts.image);
             // Upload de l'image sur le Cloud Storage
             await uploadString(refStorage, this.imageData, 'data_url').then((snapshot) => {
                 console.log('Uploaded a base64 string');
                 
-                // Création du participant sur le Firestore
-                const db = getFirestore();
-                const docRef = addDoc(collection(db, 'participant'), this.participant );
+               
+      
+      
+      
+      
+                // Obtenir Firestore
+                
+                
+
+                   const db = getFirestore();
+                const docRef = addDoc(collection(db, 'concerts'), this.concerts );
+
+                // const docRef = await addDoc(dbConcerts,{
+                // nom: this.nom
+                // })
+                console.log('document créé avec le id : ', docRef.id);
+
             });
             // redirection sur la liste des participants
-            this.$router.push('/participants');            
+            this.$router.push('/programmation');  
+             console.log("Liste des concerts", this.listeConcerts);                
         }
     }
 
 }
 </script>
-
-<style scoped>
-a{
-    color:white;
-}
-a:hover{
-    text-decoration:none;
-}
-</style>
 
 

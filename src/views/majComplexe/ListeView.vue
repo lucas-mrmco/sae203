@@ -1,5 +1,5 @@
 <template>
-    <div class="card bg-dark">
+    <div class="card">
         <div class="card-header">
             <h5>Liste des participants
                 <span class="float-right" title="Créer un nouveau participant">
