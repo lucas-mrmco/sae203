@@ -3,7 +3,7 @@
 <div class="lg:grid-cols-3 lg:mt-40 mb-20 lg:text-2xl text-xl  lg:flex lg:space-x-14  justify-center ">
     <!-- 1er pass -->
 <div
-  class="lg:w-60 lg:h-60 w-60 md:w-80  xl:h-80  h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
+  class="lg:w-60 lg:h-80 w-60 md:w-80  xl:h-auto xl:w-80  h-auto rounded-[10px] bg-[#3a3a3a] shadow-lg lg:-rotate-12 lg:mt-10  mx-auto lg:mx-0 relative"
   
 >
     <div class="w-80 mt-5">
@@ -15,11 +15,11 @@
     </div>
     <img
       src="../../public/d1.png"
-      class="pb-6 p-2  mt-5 object-contain"
+      class=" p-2  mt-5 object-contain"
     />
     
     <p
-        class="text-base font-montserrat text-center p-2 text-white"
+        class="text-base p-3  font-montserrat text-center pb-6 text-white"
         >
         À partir de 49,99€  pour le tarif général, 42,99€ pour les étudiants. Venez profiter d’une journée au festival. 
         </p>
@@ -27,7 +27,7 @@
  
 <!-- 2em pass -->
     <div
-  class="lg:w-60 lg:h-60 w-60 md:w-80 xl:h-80 h-auto relative rounded-[10px] bg-purple-900 shadow-lg  mx-auto lg:mx-0"
+  class="lg:w-60 lg:h-80 w-60 md:w-80  xl:h-4/5 pb-2 xl:w-80  h-auto relative rounded-[10px] bg-purple-900 shadow-lg  mx-auto lg:mx-0"
   
 >
     <div class="w-auto mt-5">
@@ -39,7 +39,7 @@
     </div>
     <img
       src="../../public/d3.png"
-      class="mt-5 object-contain"
+      class="mt-5 -mb-10  object-contain"
     />
      <p
         class="text-base font-montserrat text-center p-2 text-white"
@@ -49,7 +49,7 @@
 </div>
 <!-- 3em pass -->
     <div
-  class="lg:w-60 lg:h-60 w-60 md:w-80 relative xl:h-80  h-auto  rounded-[10px] bg-orange-400 shadow-lg lg:rotate-12 lg:mt-10  mx-auto lg:mx-0"
+  class="lg:w-60 lg:h-80 w-60 md:w-80  xl:h-auto xl:w-80  h-auto relative  rounded-[10px] bg-orange-400 shadow-lg lg:rotate-12 lg:mt-10  mx-auto lg:mx-0"
   
 >
     <div class="w-auto mt-5">
@@ -64,7 +64,7 @@
       class="-mb-10    mt-5 object-contain"
     />
      <p
-        class="text-base font-montserrat text-center p-2 text-white"
+        class="text-base font-montserrat text-center p-2  text-white"
         >
         À partir de 309,99€  pour le tarif général, 274,99€ pour les étudiants. Accédez à tous les concerts du 17 au au 25 juin. 
         </p>

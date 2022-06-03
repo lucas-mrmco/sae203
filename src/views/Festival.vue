@@ -58,7 +58,7 @@ import Pass from "../components/Pass.vue";
 </div>
 
 <!-- partie news -->
-<div class="p-5 md:p-10 lg:p-20">
+<div class="p-5 md:p-10 lg:px-20 lg:-mt-40">
   <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl lg:mt-60">les nouveautés</h3>
   <div class="text-lg font-montserrat space-y-5 w-full p-2 lg:w-2/3">
 
