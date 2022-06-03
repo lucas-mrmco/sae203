@@ -82,17 +82,17 @@ import Card2 from "../components/artistes/card.vue";
 
 <div class="px-20">
   <div>
-            <h5>Liste des artistes - Liste synchronisée</h5>
+            <h5 class="font-league-gothic text-2xl text-violet">Liste des artistes - Liste synchronisée</h5>
             </div>
             <form class='mb-3'>
-            <h6>Nouveaux artistes</h6>
+            <h3 class="font-league-gothic text-xl text-fushia">Nouveaux artistes</h3>
             <div class="input-group">
                 <div class="input-group-prepend">
                 <span class="input-group-text">Nom</span>
                 </div>
-                <input type="text" v-model='nom' class="form-control" required />
-                <button class="bg-black " type="button"  @click='createArtistes()' title="Création">
-                <i class="fa fa-save fa-lg"></i>
+                <input type="text" v-model='nomArtiste' class="form-control" required />
+                <button class="border-violet" type="button"  @click='createArtistes()' title="Création">
+                <img src="../../public/icons/add.svg" class="" alt="">
                 </button>
             </div>
             </form>
@@ -112,9 +112,7 @@ import Card2 from "../components/artistes/card.vue";
                 <td >
                     <input type='text' v-model='artistes.nomArtiste'  />
                 </td>
-                <td>
-                  <img :src="image" alt="">
-                </td>
+                
                 <td>
                     <button class="" @click.prevent="updateArtistes(artistes)">
                     <img src="../../public/icons/modif.svg" alt="">
@@ -128,8 +126,8 @@ import Card2 from "../components/artistes/card.vue";
             </table>
             <hr/>
 </div>
-<!-- test composant -->
-<div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid space-y-10 gap-5 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-center"><RouterLink to="/artiste" v-for="artistes in listeArtistes" :key="artistes"
+<!-- affichage liste synchro -->
+<div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid    z-20 relative w-full justify-center"><RouterLink to="/artiste" v-for="artistes in listeArtistes" :key="artistes"
         ><Card2 :nomArtiste="artistes.nomArtiste" :image="artistes.image" 
       /></RouterLink>
 <RouterView/>      </div>
@@ -140,6 +138,7 @@ import Card2 from "../components/artistes/card.vue";
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rap us</h3>
 <!-- <Rapus1/> -->
 <Card/>
+
 <!-- jour2 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeuses fr</h3>
 <RapWfr1/>
@@ -174,13 +173,24 @@ export default {
   components: {
    Card,
   },
+
+  orderBysexe: function () {
+
+      return this.listeArtistes.sort(function (artistes) {
+ 
+        if (artistes.sexe === true ) return -1;
+
+        return 0;
+      });
+    },
   data() {
     return {
       listeArtistes: [],
-      nom:null
+      nomArtiste:null
       
     };
   },
+
   mounted() {
     this.getArtistes();
   },
@@ -210,6 +220,39 @@ export default {
         });
       });
     },
+    
+    async createArtistes(){
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document pays
+      const dbArtistes= collection(firestore, "artistes");
+      // On passe en paramètre format json
+      // Les champs à mettre à jour
+      // Sauf le id qui est créé automatiquement    
+      const docRef = await addDoc(dbArtistes,{
+          nomArtiste: this.nomArtiste
+      })
+      console.log('document créé avec le id : ', docRef.id);
+    },
+
+    async updateArtistes(artistes){
+        // Obtenir Firestore
+        const firestore = getFirestore();
+        const docRef = doc(firestore, "artistes", artistes.id);
+        // On passe en paramètre format json
+        // Les champs à mettre à jour
+        await updateDoc(docRef, {
+            nomArtiste: artistes.nomArtiste
+        }) 
+      },
+
+      async deleteArtistes(artistes){
+          // Obtenir Firestore
+          const firestore = getFirestore();
+          const docRef = doc(firestore, "artistes", artistes.id);
+          // Suppression du pays référencé
+          await deleteDoc(docRef);
+        },
     
   },
   

@@ -2,6 +2,8 @@
 import Home1 from "../components/Home1.vue";
 import ProgCard from "../components/ProgCard.vue";
 import ProgCard1 from "../components/ProgCard.vue";
+import ProgCard2 from "../components/ProgCard.vue";
+import ProgCard3 from "../components/concerts/ProgCard.vue";
 
 </script>
 
@@ -82,6 +84,13 @@ import ProgCard1 from "../components/ProgCard.vue";
 <!-- jour2 -->
 <h3 id="j2" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">samedi 18 juin 2022</h3>
 
+<!-- test composant -->
+<div class="md:grid-cols-2 xl:grid-cols-3 md:px-10 px-3 grid gap-y-10 space-y-10 lg:space-y-0 md:space-x-4 xl:space-x-14 z-20 relative w-full justify-cente">
+  <RouterLink to="/concert" v-for="concerts in listeConcerts" :key="concerts"
+        ><ProgCard3 :nom="concerts.nom" :date="concerts.date" :image="concerts.image"  
+      /></RouterLink>
+<RouterView/>      </div>
+
 <!-- jour3 -->
 <h3 id="j3" class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">dimanche 19 juin 2022</h3>
 
@@ -107,3 +116,72 @@ import ProgCard1 from "../components/ProgCard.vue";
 
     
 </template>
+
+
+
+
+<script>
+import {
+  getFirestore,
+  collection,
+  doc,
+  query,
+  orderBy,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
+export default {
+  components: { ProgCard3
+
+  },
+  data() {
+    return {
+      listeConcerts: [],
+      nom:null
+      
+    };
+  },
+  mounted() {
+    this.getConcerts();
+  },
+  methods: {
+    async getConcerts() {
+      const firestore = getFirestore();
+      const dbConcerts = collection(firestore, "concerts");
+      const q = query(dbConcerts, orderBy("date", "asc"));
+      
+      await onSnapshot(q, (snapshot) => {
+        this.listeConcerts = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        
+        console.log('listeConcerts', this.listeConcerts);
+        this.listeConcerts.forEach(function (concerts) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "concerts/" + concerts.image);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+             concerts.image = url;
+            })
+            .catch((error) => {
+              console.log("erreur download url", error);
+            });
+        });
+      });
+    },
+    
+  },
+  
+};
+</script>

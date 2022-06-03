@@ -3,7 +3,7 @@
             <div class="  ">
                 <img
                 :src="image"
-                class="    rounded-tl-[10px] rounded-tr-[10px] object-cover"
+                class="    rounded-t-lg object-cover"
                 />
             </div>
             <div class="flex -ml-16 justify-end">
