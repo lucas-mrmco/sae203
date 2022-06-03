@@ -6,6 +6,8 @@ import RapWfr from "../components/artistes/RapWfr.vue";
 import RapWfr1 from "../components/artistes/RapWfr.vue";
 import RapMfr1 from "../components/artistes/RapMfr.vue";
 import RapMfr from "../components/artistes/RapMfr.vue";
+import Card from "../components/artistes/card.vue";
+import Card1 from "../components/artistes/card.vue";
 
 </script>
 
@@ -74,9 +76,63 @@ import RapMfr from "../components/artistes/RapMfr.vue";
 
 <img src="../../public/filtre.webp" alt="" class="w-screen">
 <h3 class="my-20 h-20 font-league-gothic uppercase text-3xl -mt-24 text-center">Ajouter des filtres</h3>
+
+<!-- liste synchro des artistes -->
+
+<div class="px-20">
+  <div>
+            <h5>Liste des artistes - Liste synchronisée</h5>
+            </div>
+            <form class='mb-3'>
+            <h6>Nouveaux artistes</h6>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Nom</span>
+                </div>
+                <input type="text" v-model='nom' class="form-control" required />
+                <button class="bg-black " type="button"  @click='createArtistes()' title="Création">
+                <i class="fa fa-save fa-lg"></i>
+                </button>
+            </div>
+            </form>
+            <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+                <tr v-for='artistes in listeArtistes' :key='artistes.id'>
+                <td>{{artistes.id}}</td>
+                <td >
+                    <input type='text' v-model='artistes.nomArtiste'  />
+                </td>
+                
+                <td>
+                    <button class="" @click.prevent="updateArtistes(artistes)">
+                    <img src="../../public/icons/modif.svg" alt="">
+                    </button>
+                    <button class="" @click.prevent="deleteArtistes(artistes)">
+                    <img src="../../public/icons/delete.svg" alt="">
+                    </button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+            <hr/>
+</div>
+
+<RouterLink to="/atistes" v-for="artistes in listeArtistes" :key="artistes"
+        ><Card1 :nom="artistes.nomArtiste" :image="artistes.image" 
+      /></RouterLink>
 <!-- jour1 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rap us</h3>
-<Rapus1/>
+<!-- <Rapus1/> -->
+<Card/>
 <!-- jour2 -->
 <h3 class="my-20 h-20 text-fushia uppercase font-league-gothic text-3xl ml-20">rappeuses fr</h3>
 <RapWfr1/>
@@ -86,3 +142,69 @@ import RapMfr from "../components/artistes/RapMfr.vue";
 
     
 </template>
+
+<script>
+import {
+  getFirestore,
+  collection,
+  doc,
+  query,
+  orderBy,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
+export default {
+  components: {
+   Card,
+  },
+  data() {
+    return {
+      listeArtistes: [],
+      nom:null
+      
+    };
+  },
+  mounted() {
+    this.getArtistes();
+  },
+  methods: {
+    async getArtistes() {
+      const firestore = getFirestore();
+      const dbArtistes = collection(firestore, "artistes");
+      const q = query(dbArtistes, orderBy("nomArtiste", "asc"));
+      
+      await onSnapshot(q, (snapshot) => {
+        this.listeArtistes = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        
+        console.log('listeArtistes', this.listeArtistes);
+        this.listeArtistes.forEach(function (artistes) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "/artistes" + image);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              artistes.image = url;
+            })
+            .catch((error) => {
+              console.log("erreur download url", error);
+            });
+        });
+      });
+    },
+    
+  },
+  
+};
+</script>
